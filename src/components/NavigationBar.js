@@ -1,48 +1,43 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Nav, Navbar, Container } from 'react-bootstrap';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
 const Styles = styled.div`
-	.navbar {
-		background-color: #222;
+	/* .navbar {
+		background-color: #eee;
 		a {
 			color: #bbb;
 			&:hover {
 				color: white;
 			}
 		}
-	}
+	} */
 `;
 
 export const NavigationBar = () => (
 	<Styles>
-		<Navbar expand="lg">
+		<Navbar className="border-bottom" expand="lg">
 			<Container>
 				<Navbar.Brand>
-					<Link to="/">logo</Link>
+					<Link className="navbar-brand" to="/">
+						Tereza Raidlová
+					</Link>
 				</Navbar.Brand>
-				<Navbar.Toggle
-					className="navbar-dark"
-					aria-controls="basic-navbar-nav"
-				/>
-				<Navbar.Collapse id="basic-navbar-nav">
+				<Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
+				<Navbar.Collapse id="navbar-toggle">
 					<Nav className="ml-auto">
-						<Nav.Item>
-							<Nav.Link>
-								<Link to="/">Home</Link>
-							</Nav.Link>
-						</Nav.Item>
-						<Nav.Item>
-							<Nav.Link>
-								<Link to="/about">About</Link>
-							</Nav.Link>
-						</Nav.Item>
-						<Nav.Item>
-							<Nav.Link>
-								<Link to="/contact">Contact</Link>
-							</Nav.Link>
-						</Nav.Item>
+						<Link className="nav-link" to="/">
+							Home
+						</Link>
+						<Link className="nav-link" to="/about">
+							About
+						</Link>
+						<Link className="nav-link" to="/contact">
+							Contact
+						</Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

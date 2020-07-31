@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Home, About, Contact, NoMatch } from './pages';
-import { Layout } from './components/Layout';
-import { NavigationBar } from './components/NavigationBar';
+import { NavigationBar, Layout, Footer } from './components';
 
 function App() {
 	return (
@@ -18,6 +17,7 @@ function App() {
 						<Route component={NoMatch} />
 					</Switch>
 				</Layout>
+				<Footer />
 			</Router>
 		</>
 	);
