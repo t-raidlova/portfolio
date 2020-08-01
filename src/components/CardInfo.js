@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Styles = styled.div`
 	.t-card {
 		&-info {
-			margin-top: 10px;
+			margin: 10px;
 			min-height: 100px;
 		}
 
