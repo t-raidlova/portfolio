@@ -8,7 +8,7 @@
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",
-		"build": "cd react-ui/ && npm install && npm run build"
+		"build": "cd portfolio/ && npm install && npm run build"
 	},
 	"cacheDirectories": [
 		"node_modules",
