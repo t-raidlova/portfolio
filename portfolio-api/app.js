@@ -1,15 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
 const sendGrid = require('@sendGrid/mail');
+require('dotenv').config();
+
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 
 const app = express();
 
 app.use(bodyParser.json());
-
 app.use(cors());
-
 app.use((req, res, next) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Change later to only allow our server
 	res.setHeader(
@@ -21,13 +21,13 @@ app.use((req, res, next) => {
 });
 
 app.get('/api', (req, res, next) => {
-	res.send('API works');
+	res.send(`API works`);
 });
 
 app.post('/api/email', (req, res, next) => {
 	console.log(req.body);
 
-	sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
+	sendGrid.setApiKey(SENDGRID_API_KEY);
 
 	const msg = {
 		to: 'tereza.raidlova@gmail.com',
