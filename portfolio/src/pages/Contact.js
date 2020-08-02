@@ -44,8 +44,6 @@ export class Contact extends React.Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 
-		console.log(event.target);
-
 		//prevents from submitting multiple times
 		this.setState({
 			disabled: true,
