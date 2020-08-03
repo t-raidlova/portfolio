@@ -78,7 +78,7 @@ export class Contact extends React.Component {
 			<Styles>
 				<Content>
 					<h1 className="display-4 font-weight-bolder p-0 py-5 text-center">
-						Contact
+						Let's Talk!
 					</h1>
 					<Form onSubmit={this.handleSubmit}>
 						<Form.Group>

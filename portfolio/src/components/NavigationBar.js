@@ -7,13 +7,7 @@ import Container from 'react-bootstrap/Container';
 
 const Styles = styled.div`
 	/* .navbar {
-		background-color: #eee;
-		a {
-			color: #bbb;
-			&:hover {
-				color: white;
-			}
-		}
+		background-color: #652cdd;
 	} */
 `;
 

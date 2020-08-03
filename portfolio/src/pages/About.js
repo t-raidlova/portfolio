@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring, animated } from 'react-spring';
 
 const Styles = styled.div`
 	.content {
@@ -7,13 +8,26 @@ const Styles = styled.div`
 	}
 `;
 
-export const About = () => (
-	<Styles>
-		<h1 className="display-1 font-weight-bolder p-0 py-3">About</h1>
-		<p>Hello, I'm a front end developer & UI Designer.</p>
-		<p className="content">
-			I'm constantly learning new things. Currently those things include gaining
-			more experience with <mark>React</mark> and Typescript.
-		</p>
-	</Styles>
-);
+export const About = () => {
+	const anim = useSpring({
+		marginLeft: 0,
+		from: { marginLeft: -20 },
+		config: { duration: 200 },
+	});
+
+	return (
+		<Styles>
+			<animated.h1
+				style={anim}
+				className="display-1 font-weight-bolder p-0 py-3"
+			>
+				About
+			</animated.h1>
+			<p>Hello, I'm a front end developer & UI Designer.</p>
+			<p className="content">
+				I'm constantly learning new things. Currently those things include
+				gaining more experience with React and Typescript.
+			</p>
+		</Styles>
+	);
+};

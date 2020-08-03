@@ -1,9 +1,9 @@
 import React from 'react';
 import Row from 'react-bootstrap/Row';
 import { Card } from '../components';
-import card1 from '../assets/card.png';
-import card2 from '../assets/card.png';
-import card3 from '../assets/card.png';
+import card1 from '../assets/card1.png';
+import card2 from '../assets/card2.png';
+import card3 from '../assets/card3.png';
 
 export class Carousel extends React.Component {
 	constructor(props) {
