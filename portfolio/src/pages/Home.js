@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from '../components';
+
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -18,6 +19,7 @@ export const Home = () => {
 						</div>
 						<div className="mt-5 pt-5 text-center">
 							<h4 className="mb-3 text-center">Checkout my projects below</h4>
+
 							<svg
 								aria-hidden="true"
 								focusable="false"
