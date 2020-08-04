@@ -5,3 +5,4 @@ export * from './Carousel';
 export * from './Card';
 export * from './CardInfo';
 export * from './Content';
+export * from './Wave';

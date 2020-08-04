@@ -1,22 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 
 const Styles = styled.div`
-	/* .navbar {
-		background-color: #652cdd;
-	} */
+	.navbar {
+		background-color: #cfe8f7;
+	}
 `;
 
 export const NavigationBar = () => (
 	<Styles>
-		<Navbar className="border-bottom" expand="lg">
+		<Navbar className="font-weight-bold py-3" expand="lg">
 			<Container>
 				<Navbar.Brand>
-					<Link className="navbar-brand" to="/">
+					<Link style={{ color: '#4433ff' }} className="navbar-brand" to="/">
 						Tereza Raidlová
 					</Link>
 				</Navbar.Brand>
