@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const sendGrid = require('@sendGrid/mail');
+const PORT = process.env.PORT || 5000;
 require('dotenv').config();
 
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
@@ -51,4 +52,4 @@ app.post('/api/email', (req, res, next) => {
 		});
 });
 
-app.listen(3030, '0.0.0.0');
+app.listen(PORT);
