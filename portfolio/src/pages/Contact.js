@@ -50,7 +50,7 @@ export class Contact extends React.Component {
 			disabled: true,
 		});
 
-		Axios.post('/api/email', this.state)
+		Axios.post('/email', this.state)
 			.then((res) => {
 				if (res.data.success) {
 					this.setState({
