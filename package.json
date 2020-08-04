@@ -6,6 +6,7 @@
 		"node": "12.16.3"
 	},
 	"main": "server.js",
+	"https_only": true,
 	"scripts": {
 		"start": "node server.js",
 		"build": "cd portfolio/ && npm install && npm run build"
