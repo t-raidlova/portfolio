@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import styled from 'styled-components';
 
 import { Content } from '../components';
@@ -59,7 +59,8 @@ export class Contact extends React.Component {
 			disabled: true,
 		});
 
-		Axios.post('https://api.sendgrid.com/v3/mail/send', this.state)
+		axios
+			.post('https://api.sendgrid.com/v3/mail/send', this.state)
 			.then((res) => {
 				if (res.data.success) {
 					this.setState({
