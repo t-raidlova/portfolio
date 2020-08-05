@@ -143,7 +143,10 @@ export class Contact extends React.Component {
 								<p className="d-inline success-msg">Email Sent</p>
 							)}
 							{this.state.emailSent === false && (
-								<p className="d-inline err-msg">Email Not Sent</p>
+								<p className="d-inline err-msg">
+									Something went wrong, sad..you can email me at
+									terezaraidlova@gmail.com
+								</p>
 							)}
 						</Form>
 					</Content>
