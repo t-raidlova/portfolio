@@ -23,15 +23,15 @@ export class Carousel extends React.Component {
 				{
 					id: 1,
 					title: 'SVG demos',
-					subTitle: 'learning SVG',
+					subTitle: 'Learning SVG',
 					imgSrc: card2,
 					link: 'https://t-raidlova.github.io/svg-demos/',
 					selected: false,
 				},
 				{
 					id: 2,
-					title: 'Minolta website',
-					subTitle: 'minolta',
+					title: 'Minolta',
+					subTitle: 'Minolta website',
 					imgSrc: card3,
 					link: 'https://t-raidlova.github.io/minolta-website/',
 					selected: false,
@@ -70,7 +70,7 @@ export class Carousel extends React.Component {
 
 	render() {
 		return (
-			<Row className="justify-content-between">
+			<Row className="d-flex justify-content-around">
 				{this.makeItems(this.state.items)}
 			</Row>
 		);

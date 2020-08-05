@@ -5,19 +5,22 @@ import styled from 'styled-components';
 const Styles = styled.div`
 	.t-card {
 		&-info {
-			margin: 10px;
-			min-height: 100px;
+			margin: 1rem 1rem 1rem 2rem;
+			min-height: 13rem;
 		}
 
 		&-title {
-			font-size: 1.8rem;
-			margin: 0px;
+			font-size: 2.5rem;
+			margin: 1rem 0;
 		}
 
 		&-sub-title {
-			font-size: 1rem;
-			margin: 0px;
+			font-size: 1.6rem;
 		}
+	}
+	a {
+		color: var(--primary);
+		font-size: 2.2rem;
 	}
 `;
 

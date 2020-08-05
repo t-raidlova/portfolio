@@ -14,11 +14,11 @@ const trans = (x, y, s) =>
 
 const Styles = styled.div`
 	.t-card {
-		margin: 20px;
 		box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
 		border-radius: 8px;
 		transition: box-shadow 0.5s;
 		will-change: transform;
+		margin: 2rem 0 2rem 0;
 	}
 
 	.card:hover {
@@ -41,7 +41,7 @@ export const Card = (props) => {
 	return (
 		<Styles>
 			<animated.div
-				className="d-inline-block t-card"
+				className=" t-card"
 				onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
 				onMouseLeave={() => set({ xys: [0, 0, 1] })}
 				style={{ transform: anim.xys.interpolate(trans) }}

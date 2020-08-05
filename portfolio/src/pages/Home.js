@@ -12,6 +12,17 @@ const Styles = styled.div`
 			margin-bottom: 2rem;
 		}
 	}
+	@media screen and (max-width: 600px) {
+		h1 {
+			font-size: 4.5rem;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		h2 {
+			font-size: 3rem;
+			text-align: center;
+		}
+	}
 `;
 
 export const Home = () => {

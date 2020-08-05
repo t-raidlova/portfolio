@@ -11,7 +11,7 @@ const Styles = styled.div`
 	}
 	@media screen and (max-width: 1000px) {
 		.pattern {
-			min-height: 20vh;
+			height: 30vh;
 		}
 	}
 `;
