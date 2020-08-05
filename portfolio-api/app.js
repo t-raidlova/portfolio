@@ -1,9 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const sendGrid = require('@sendGrid/mail');
-const PORT = process.env.PORT;
-require('dotenv').config();
+const PORT = process.env.PORT || 5000;
 
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 // 	res.send(`API works`);
 // });
 
-app.post('/v3/mail/send', (req, res, next) => {
+app.post('/v3/mail/send', (req, res) => {
 	console.log(req.body);
 
 	sendGrid.setApiKey(SENDGRID_API_KEY);
@@ -39,7 +39,7 @@ app.post('/v3/mail/send', (req, res, next) => {
 
 	sendGrid
 		.send(msg)
-		.then((result) => {
+		.then(() => {
 			res.status(200).json({
 				success: true,
 			});

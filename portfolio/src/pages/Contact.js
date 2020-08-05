@@ -59,8 +59,7 @@ export class Contact extends React.Component {
 			disabled: true,
 		});
 
-		axios
-			.post('https://api.sendgrid.com/v3/mail/send', this.state)
+		axios.post('https://api.sendgrid.com/v3/mail/send', this.state)
 			.then((res) => {
 				if (res.data.success) {
 					this.setState({
@@ -90,12 +89,13 @@ export class Contact extends React.Component {
 				<Container>
 					<Content>
 						<h2>Let's Talk!</h2>
-						<Form onSubmit={this.handleSubmit}>
+						<Form className='form' onSubmit={this.handleSubmit}>
 							<Form.Group>
 								<Form.Label htmlFor="full-name">
 									<h4>Full Name</h4>
 								</Form.Label>
 								<Form.Control
+									className='form-control-lg'
 									id="full-name"
 									name="name"
 									type="text"
@@ -109,6 +109,7 @@ export class Contact extends React.Component {
 									<h4>Email</h4>
 								</Form.Label>
 								<Form.Control
+									className='form-control-lg'
 									id="email"
 									name="email"
 									type="email"
@@ -122,6 +123,7 @@ export class Contact extends React.Component {
 									<h4>Message</h4>
 								</Form.Label>
 								<Form.Control
+									className='form-control-lg'
 									id="message"
 									name="message"
 									as="textarea"
@@ -132,7 +134,7 @@ export class Contact extends React.Component {
 							</Form.Group>
 
 							<Button
-								className="button"
+								className="button purple"
 								variant="primary"
 								type="submit"
 								disabled={this.state.disabled}
