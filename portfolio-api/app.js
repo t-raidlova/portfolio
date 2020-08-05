@@ -25,7 +25,7 @@ app.get('/api', (req, res, next) => {
 	res.send(`API works`);
 });
 
-app.post('/api/email', (req, res, next) => {
+app.post('/v3/mail/send', (req, res, next) => {
 	console.log(req.body);
 
 	sendGrid.setApiKey(SENDGRID_API_KEY);

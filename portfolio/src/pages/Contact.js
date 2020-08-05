@@ -59,7 +59,7 @@ export class Contact extends React.Component {
 			disabled: true,
 		});
 
-		Axios.post('http://localhost:5000/api/email', this.state)
+		Axios.post('https://api.sendgrid.com/v3/mail/send', this.state)
 			.then((res) => {
 				if (res.data.success) {
 					this.setState({
