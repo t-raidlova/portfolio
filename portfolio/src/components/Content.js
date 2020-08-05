@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 export const Content = (props) => {
 	return (
 		<Row className="justify-content-center">
-			<Col md={8}>{props.children}</Col>
+			<Col md={7}>{props.children}</Col>
 		</Row>
 	);
 };

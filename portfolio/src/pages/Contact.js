@@ -2,13 +2,22 @@ import React from 'react';
 import Axios from 'axios';
 import styled from 'styled-components';
 
-import { Content, HeroPattern } from '../components';
+import { Content } from '../components';
 
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 const Styles = styled.div`
+	h2 {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	.button {
+		font-size: 1.8rem;
+		margin: 2rem 0;
+	}
+
 	.success-msg {
 		color: #57a773;
 		padding: 10px 15px;
@@ -50,7 +59,7 @@ export class Contact extends React.Component {
 			disabled: true,
 		});
 
-		Axios.post('/email', this.state)
+		Axios.post('http://localhost:5000/api/email', this.state)
 			.then((res) => {
 				if (res.data.success) {
 					this.setState({
@@ -77,66 +86,68 @@ export class Contact extends React.Component {
 	render() {
 		return (
 			<Styles>
-				<HeroPattern pttrn={'pattern'}>
-					<Container>
-						<Content>
-							<h1 className="display-4 font-weight-bolder p-0 py-5 text-center">
-								Let's Talk!
-							</h1>
-							<Form onSubmit={this.handleSubmit}>
-								<Form.Group>
-									<Form.Label htmlFor="full-name">Full Name</Form.Label>
-									<Form.Control
-										id="full-name"
-										name="name"
-										type="text"
-										value={this.state.name}
-										onChange={this.handleChange}
-									/>
-								</Form.Group>
+				<Container>
+					<Content>
+						<h2>Let's Talk!</h2>
+						<Form onSubmit={this.handleSubmit}>
+							<Form.Group>
+								<Form.Label htmlFor="full-name">
+									<h4>Full Name</h4>
+								</Form.Label>
+								<Form.Control
+									id="full-name"
+									name="name"
+									type="text"
+									value={this.state.name}
+									onChange={this.handleChange}
+								/>
+							</Form.Group>
 
-								<Form.Group>
-									<Form.Label htmlFor="email">Email</Form.Label>
-									<Form.Control
-										id="email"
-										name="email"
-										type="email"
-										value={this.state.email}
-										onChange={this.handleChange}
-									/>
-								</Form.Group>
+							<Form.Group>
+								<Form.Label htmlFor="email">
+									<h4>Email</h4>
+								</Form.Label>
+								<Form.Control
+									id="email"
+									name="email"
+									type="email"
+									value={this.state.email}
+									onChange={this.handleChange}
+								/>
+							</Form.Group>
 
-								<Form.Group>
-									<Form.Label htmlFor="message">Message</Form.Label>
-									<Form.Control
-										id="message"
-										name="message"
-										as="textarea"
-										rows="2"
-										value={this.state.message}
-										onChange={this.handleChange}
-									/>
-								</Form.Group>
+							<Form.Group>
+								<Form.Label htmlFor="message">
+									<h4>Message</h4>
+								</Form.Label>
+								<Form.Control
+									id="message"
+									name="message"
+									as="textarea"
+									rows="4"
+									value={this.state.message}
+									onChange={this.handleChange}
+								/>
+							</Form.Group>
 
-								<Button
-									className="d-inline-block"
-									variant="primary"
-									type="submit"
-									disabled={this.state.disabled}
-								>
-									Send
-								</Button>
+							<Button
+								className="button"
+								variant="primary"
+								type="submit"
+								disabled={this.state.disabled}
+							>
+								Send
+							</Button>
 
-								{this.state.emailSent === true && (
-									<p className="d-inline success-msg">Email Sent</p>
-								)}
-								{this.state.emailSent === false && (
-									<p className="d-inline err-msg">Email Not Sent</p>
-								)}
-							</Form>
-						</Content>
-					</Container>
-				</HeroPattern>
+							{this.state.emailSent === true && (
+								<p className="d-inline success-msg">Email Sent</p>
+							)}
+							{this.state.emailSent === false && (
+								<p className="d-inline err-msg">Email Not Sent</p>
+							)}
+						</Form>
+					</Content>
+				</Container>
 			</Styles>
 		);
 	}

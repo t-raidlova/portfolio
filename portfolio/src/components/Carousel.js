@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
 
 import { Card } from '../components';
 import card1 from '../assets/card1.png';
@@ -71,11 +70,9 @@ export class Carousel extends React.Component {
 
 	render() {
 		return (
-			<Container>
-				<Row className="justify-content-between">
-					{this.makeItems(this.state.items)}
-				</Row>
-			</Container>
+			<Row className="justify-content-between">
+				{this.makeItems(this.state.items)}
+			</Row>
 		);
 	}
 }
