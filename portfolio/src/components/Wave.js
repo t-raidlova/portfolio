@@ -4,14 +4,17 @@ import Background from '../assets/wave.svg';
 
 const Styles = styled.div`
 	.pattern {
+		transform: translateY(-5px);
 		background-image: url(${Background});
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 70vh;
+		min-height: 50vh;
+
+		/* height: 70vh; */
 	}
 	@media screen and (max-width: 1000px) {
 		.pattern {
-			height: 30vh;
+			height: 40vh;
 		}
 	}
 `;

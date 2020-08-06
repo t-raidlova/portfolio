@@ -1,10 +1,8 @@
 :root {
 	--primary: #4433ff;
 	--secondary: hsla(259, 72%, 52%, 0.6);
-	--text: rgb(44, 44, 44);
-	--nav-bg: rgba(0, 0, 0, 0.9);
+	--text: #333;
 	--body-bg: radial-gradient(#525252, #131313);
-	--features-bg: #323232;
 	font-size: 10px;
 }
 
@@ -35,12 +33,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-	font-size: 8.8rem;
+	font-size: 8rem;
 	font-weight: 700;
+	padding-bottom: 1rem;
 }
 
 h2 {
-	font-size: 7.2rem;
+	font-size: 7rem;
 	font-weight: 700;
 }
 

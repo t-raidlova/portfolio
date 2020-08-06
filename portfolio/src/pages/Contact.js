@@ -16,6 +16,7 @@ const Styles = styled.div`
 	.button {
 		font-size: 1.8rem;
 		margin: 2rem 0;
+		background-color: var(--primary);
 	}
 
 	.success-msg {
@@ -59,7 +60,8 @@ export class Contact extends React.Component {
 			disabled: true,
 		});
 
-		axios.post('https://api.sendgrid.com/v3/mail/send', this.state)
+		axios
+			.post('https://api.sendgrid.com/v3/mail/send', this.state)
 			.then((res) => {
 				if (res.data.success) {
 					this.setState({
@@ -89,13 +91,13 @@ export class Contact extends React.Component {
 				<Container>
 					<Content>
 						<h2>Let's Talk!</h2>
-						<Form className='form' onSubmit={this.handleSubmit}>
+						<Form className="form" onSubmit={this.handleSubmit}>
 							<Form.Group>
 								<Form.Label htmlFor="full-name">
 									<h4>Full Name</h4>
 								</Form.Label>
 								<Form.Control
-									className='form-control-lg'
+									className="form-control-lg"
 									id="full-name"
 									name="name"
 									type="text"
@@ -109,7 +111,7 @@ export class Contact extends React.Component {
 									<h4>Email</h4>
 								</Form.Label>
 								<Form.Control
-									className='form-control-lg'
+									className="form-control-lg"
 									id="email"
 									name="email"
 									type="email"
@@ -123,7 +125,7 @@ export class Contact extends React.Component {
 									<h4>Message</h4>
 								</Form.Label>
 								<Form.Control
-									className='form-control-lg'
+									className="form-control-lg"
 									id="message"
 									name="message"
 									as="textarea"
@@ -147,7 +149,7 @@ export class Contact extends React.Component {
 							)}
 							{this.state.emailSent === false && (
 								<p className="d-inline err-msg">
-									Something went wrong, sad..you can email me at
+									Something went wrong, the sadness..you can email me at
 									terezaraidlova@gmail.com
 								</p>
 							)}
