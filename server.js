@@ -14,6 +14,10 @@ const app = express();
 app.use(sslRedirect());
 app.use(express.static(path.join(__dirname, './portfolio/build')));
 
+app.get('*', function (req, res) {
+	res.sendFile(path.join(__dirname, './portfolio/build', 'index.html'));
+});
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use((res, next) => {
@@ -21,10 +25,6 @@ app.use((res, next) => {
 	res.setHeader('Access-Control-Allow-Methods', 'POST');
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 	next();
-});
-
-app.get('*', function (req, res) {
-	res.sendFile(path.join(__dirname, './portfolio/build', 'index.html'));
 });
 
 app.post('/v3/mail/send', (req, res) => {
