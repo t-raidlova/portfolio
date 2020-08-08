@@ -11,8 +11,8 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use((req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', '*'); // Change later to only allow our server
+app.use((res, next) => {
+	res.setHeader('Access-Control-Allow-Origin', 'https://sendgrid.api-docs.io'); // Change later to only allow our server
 	res.setHeader(
 		'Access-Control-Allow-Methods',
 		'GET, POST, PUT, PATCH, DELETE'

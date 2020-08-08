@@ -12,17 +12,7 @@ const Styles = styled.div`
 			margin-bottom: 2rem;
 		}
 	}
-	@media screen and (max-width: 1000px) {
-		h1 {
-			font-size: 5.5rem;
-			text-align: center;
-			margin-bottom: 2rem;
-		}
-		h2 {
-			font-size: 4rem;
-			text-align: center;
-		}
-	}
+
 	@media screen and (max-width: 400px) {
 		h1 {
 			font-size: 4.5rem;
@@ -35,6 +25,17 @@ const Styles = styled.div`
 		}
 		h4 {
 			font-size: 1.8rem;
+		}
+	}
+	@media screen and (max-width: 900px) {
+		h1 {
+			font-size: 5.5rem;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		h2 {
+			font-size: 4rem;
+			text-align: center;
 		}
 	}
 `;
