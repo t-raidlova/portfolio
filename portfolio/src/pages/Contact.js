@@ -16,7 +16,6 @@ const Styles = styled.div`
 	.button {
 		font-size: 1.8rem;
 		margin: 2rem 0;
-		background-color: var(--primary);
 	}
 
 	.success-msg {
@@ -136,7 +135,7 @@ export class Contact extends React.Component {
 							</Form.Group>
 
 							<Button
-								className="button purple"
+								className="button"
 								variant="primary"
 								type="submit"
 								disabled={this.state.disabled}

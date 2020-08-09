@@ -6,24 +6,20 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 const Styles = styled.div`
-	/* .navbar {
-		background-color: #cfe8f7;
-	} */
-	.navbar-brand {
+	.logo {
+		font-family: 'LoveloBlack', 'Helvetica', sans-serif;
+		text-decoration: none;
 		font-size: 2rem;
-		color: var(--text);
-	}
-	svg {
-		filter: drop-shadow(16px 16px 20px #333);
+		color: var(--primary);
 	}
 `;
 
 export const NavigationBar = () => (
 	<Styles>
-		<Navbar className="font-weight-bold py-5 mb-4" expand="lg">
+		<Navbar className="font-weight-bold py-5 mb-3" expand="lg">
 			<Navbar.Brand>
-				<Link className="navbar-brand" to="/">
-					Tereza Raidlová
+				<Link style={{ color: '' }} className="logo" to="/">
+					TEREZA RAIDLOVÁ
 				</Link>
 			</Navbar.Brand>
 			<Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
@@ -35,9 +31,9 @@ export const NavigationBar = () => (
 					<Link className="nav-link" to="/about">
 						About
 					</Link>
-					<Link className="nav-link" to="/contact">
+					{/* <Link className="nav-link" to="/contact">
 						Contact
-					</Link>
+					</Link> */}
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>

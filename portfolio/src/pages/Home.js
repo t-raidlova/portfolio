@@ -13,9 +13,20 @@ const Styles = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 400px) {
+	.social {
+		font-style: italic;
+		text-decoration: none;
+		a {
+			font-weight: 500;
+			font-size: 2rem;
+			color: var(--primary);
+		}
+		padding: 5rem 0 0.5rem 0;
+	}
+
+	@media screen and (max-width: 500px) {
 		h1 {
-			font-size: 4.5rem;
+			font-size: 4rem;
 			text-align: center;
 			margin-bottom: 2rem;
 		}
@@ -26,16 +37,12 @@ const Styles = styled.div`
 		h4 {
 			font-size: 1.8rem;
 		}
-	}
-	@media screen and (max-width: 900px) {
-		h1 {
-			font-size: 5.5rem;
+		.social {
 			text-align: center;
-			margin-bottom: 2rem;
+			padding: 4rem 0 0rem 0;
 		}
-		h2 {
-			font-size: 4rem;
-			text-align: center;
+		.checkout {
+			padding: 2rem 0 5rem 0;
 		}
 	}
 `;
@@ -49,6 +56,18 @@ export const Home = () => {
 					<h2>& Web Designer</h2>
 				</div>
 			</div>
+			<div className="social">
+				<a
+					href="https://github.com/t-raidlova"
+					rel="noopener noreferrer"
+					target="_blank"
+				>
+					github,
+				</a>
+
+				<a href="mailto:terezaraidlova@gmail.com"> email</a>
+			</div>
+
 			<div className="checkout">
 				<h4>Checkout my projects below</h4>
 				<svg

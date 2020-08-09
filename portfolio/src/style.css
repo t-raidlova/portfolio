@@ -1,23 +1,25 @@
+@import './fonts.css';
+
 :root {
-	--primary: #4433ff;
-	--secondary: hsla(259, 72%, 52%, 0.6);
-	--text: #333;
 	font-size: 10px;
+	--primary: #43d8bc;
+	--text: #333;
 }
 
 body {
-	font-family: 'Roboto Mono', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	margin: 0;
 	padding: 0;
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: 'Merriweather', 'Georgia', serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	color: var(--text);
+	background: rgb(250, 250, 250);
 }
 
 body::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 	background-color: hsl(225deg, 25%, 95%);
 }
 
@@ -32,13 +34,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-	font-size: 7rem;
+	font-family: 'LoveloBlack', 'Helvetica', sans-serif;
+	font-size: 6.5rem;
+	padding: 1.5rem 0;
 	font-weight: 700;
-	padding-bottom: 1rem;
 }
 
 h2 {
-	font-size: 7rem;
+	font-family: 'LoveloBlack', 'Helvetica', sans-serif;
+	font-size: 6rem;
 	font-weight: 700;
 }
 
@@ -47,8 +51,8 @@ h3 {
 }
 
 h4 {
-	font-size: 2.3rem;
-	font-weight: 500;
+	font-size: 2rem;
+	font-weight: 300;
 	padding: 1rem 0;
 }
 

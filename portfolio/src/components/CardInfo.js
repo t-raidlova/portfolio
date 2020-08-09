@@ -10,6 +10,7 @@ const Styles = styled.div`
 		}
 
 		&-title {
+			font-family: 'LoveloBlack', 'Helvetica', sans-serif;
 			font-size: 2.5rem;
 			margin: 1rem 0;
 		}
@@ -19,6 +20,7 @@ const Styles = styled.div`
 		}
 	}
 	a {
+		font-family: 'LoveloBlack', 'Helvetica', sans-serif;
 		color: var(--primary);
 		font-size: 2.2rem;
 	}

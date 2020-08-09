@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 
 const Styles = styled.div`
 	h1 {
-		margin-bottom: 5rem;
+		margin-bottom: 4rem;
 	}
 	h4 {
 		text-decoration: underline;
@@ -53,7 +53,10 @@ export const About = () => {
 	return (
 		<Styles>
 			<animated.h1 style={anim}>About</animated.h1>
-			<p>Hello, I'm a Front-end Developer & UI Designer.</p>
+			<p>
+				Hello, I'm a Frontend Developer & UI Designer based in Prague, Czech
+				Republic.
+			</p>
 			<p>
 				I'm constantly learning new things. Currently those things include
 				gaining more experience with React and NodeJS.
