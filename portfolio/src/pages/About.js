@@ -1,47 +1,5 @@
 import React from 'react';
-
-import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-
-const Styles = styled.div`
-	h1 {
-		margin-bottom: 4rem;
-	}
-	h4 {
-		text-decoration: underline;
-	}
-	.container {
-		margin-top: 5rem;
-		display: flex;
-	}
-	.experience {
-		flex: 2;
-		li {
-			padding: 0.5rem 0;
-		}
-	}
-	.skills {
-		flex: 2;
-		ul {
-			list-style: none;
-			padding: 0;
-		}
-		li {
-			padding: 1rem 0;
-		}
-		span {
-			padding-left: 1rem;
-		}
-	}
-	svg {
-		width: 2.5rem;
-	}
-	@media screen and (max-width: 1000px) {
-		.container {
-			flex-direction: column;
-		}
-	}
-`;
 
 export const About = () => {
 	const anim = useSpring({
@@ -51,7 +9,7 @@ export const About = () => {
 	});
 
 	return (
-		<Styles>
+		<div className="about">
 			<animated.h1 style={anim}>About</animated.h1>
 			<p>
 				Hello, I'm a Frontend Developer & UI Designer based in Prague, Czech
@@ -129,6 +87,6 @@ export const About = () => {
 					</ul>
 				</div>
 			</div>
-		</Styles>
+		</div>
 	);
 };

@@ -1,0 +1,63 @@
+.checkout {
+	text-align: center;
+	margin: 7rem 0;
+	h4 {
+		margin-bottom: 2rem;
+	}
+}
+
+.social {
+	font-style: italic;
+	font-weight: 500;
+	font-size: 1.8;
+	padding: 5rem 0 0.5rem 0;
+
+	a {
+		font-weight: 500;
+		font-size: 2rem;
+		text-decoration: none;
+		color: var(--primary);
+
+		&.link-underline {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				bottom: 0;
+				left: 0;
+				background-color: currentColor;
+				visibility: hidden;
+				transform: scaleX(0);
+				transition: all 0.3s ease-in-out;
+			}
+			&:hover:before {
+				visibility: visible;
+				transform: scaleX(1);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	h1 {
+		font-size: 4rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	h2 {
+		font-size: 3rem;
+		text-align: center;
+	}
+	h4 {
+		font-size: 1.8rem;
+	}
+	.social {
+		text-align: center;
+		padding: 4rem 0 0rem 0;
+	}
+	.checkout {
+		padding: 2rem 0 5rem 0;
+	}
+}

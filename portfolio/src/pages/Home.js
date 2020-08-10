@@ -1,55 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { Carousel } from '../components';
 
-const Styles = styled.div`
-	.checkout {
-		text-align: center;
-		margin: 5rem 0 5rem 0;
-		padding: 5rem 0 5rem 0;
-		h4 {
-			margin-bottom: 2rem;
-		}
-	}
-
-	.social {
-		font-style: italic;
-		text-decoration: none;
-		a {
-			font-weight: 500;
-			font-size: 2rem;
-			color: var(--primary);
-		}
-		padding: 5rem 0 0.5rem 0;
-	}
-
-	@media screen and (max-width: 500px) {
-		h1 {
-			font-size: 4rem;
-			text-align: center;
-			margin-bottom: 2rem;
-		}
-		h2 {
-			font-size: 3rem;
-			text-align: center;
-		}
-		h4 {
-			font-size: 1.8rem;
-		}
-		.social {
-			text-align: center;
-			padding: 4rem 0 0rem 0;
-		}
-		.checkout {
-			padding: 2rem 0 5rem 0;
-		}
-	}
-`;
-
 export const Home = () => {
 	return (
-		<Styles>
+		<>
 			<div className="jumbo">
 				<div>
 					<h1>Front-end Developer</h1>
@@ -58,6 +13,7 @@ export const Home = () => {
 			</div>
 			<div className="social">
 				<a
+					className="link-underline"
 					href="https://github.com/t-raidlova"
 					rel="noopener noreferrer"
 					target="_blank"
@@ -65,7 +21,9 @@ export const Home = () => {
 					github,
 				</a>
 
-				<a href="mailto:terezaraidlova@gmail.com"> email</a>
+				<a className="link-underline" href="mailto:terezaraidlova@gmail.com">
+					email
+				</a>
 			</div>
 
 			<div className="checkout">
@@ -83,6 +41,6 @@ export const Home = () => {
 				</svg>
 			</div>
 			<Carousel />
-		</Styles>
+		</>
 	);
 };

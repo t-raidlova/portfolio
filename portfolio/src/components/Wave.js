@@ -8,14 +8,12 @@ const Styles = styled.div`
 		background-image: url(${Background});
 		background-repeat: no-repeat;
 		background-size: cover;
-
-		/* height: 70vh; */
 	}
-	@media screen and (min-width: 0px) {
+	/* @media screen and (min-width: 0px) {
 		.pattern {
 			height: 20vh;
 		}
-	}
+	} */
 	@media screen and (min-width: 400px) {
 		.pattern {
 			height: 60vh;

@@ -1,0 +1,288 @@
+/* merriweather 300 */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../assets/fonts/merriweather-v11-latin-300.woff2") format("woff2"), url("../assets/fonts/merriweather-v11-latin-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather 300 italic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: url("../assets/fonts/merriweather-v11-latin-300italic.woff2") format("woff2"), url("../assets/fonts/merriweather-v11-latin-300italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather regular */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/merriweather-v11-latin-regular.woff2") format("woff2"), url("../assets/fonts/merriweather-v11-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather italic*/
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/fonts/merriweather-v11-latin-italic.woff2") format("woff2"), url("../assets/fonts/merriweather-v11-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather 700 */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/merriweather-v11-latin-700.woff2") format("woff2"), url("../assets/fonts/merriweather-v11-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather 700 italic */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 700;
+  src: url("../assets/fonts/merriweather-v11-latin-700italic.woff2") format("woff2"), url("../assets/fonts/merriweather-v11-latin-700italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* LoveloBlack */
+@font-face {
+  font-family: 'LoveloBlack';
+  src: url("../assets/fonts/LoveloBlack.woff2") format("woff2"), url("../assets/fonts/LoveloBlack.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar {
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.navbar .logo {
+  font-family: 'LoveloBlack', 'Helvetica', sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: var(--primary);
+}
+
+.checkout {
+  text-align: center;
+  margin: 7rem 0;
+}
+
+.checkout h4 {
+  margin-bottom: 2rem;
+}
+
+.social {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.8;
+  padding: 5rem 0 0.5rem 0;
+}
+
+.social a {
+  font-weight: 500;
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.social a.link-underline {
+  position: relative;
+}
+
+.social a.link-underline:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.social a.link-underline:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  .social {
+    text-align: center;
+    padding: 4rem 0 0rem 0;
+  }
+  .checkout {
+    padding: 2rem 0 5rem 0;
+  }
+}
+
+.about h1 {
+  margin-bottom: 4rem;
+}
+
+.about h4 {
+  text-decoration: underline;
+}
+
+.about .container {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .container .experience {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.about .container .experience li {
+  padding: 0.5rem 0;
+}
+
+.about .container .skills {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.about .container .skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .container .skills li {
+  padding: 1rem 0;
+}
+
+.about .container .skills span {
+  padding-left: 1rem;
+}
+
+.about .container svg {
+  width: 2.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+:root {
+  font-size: 10px;
+  --primary: #43d8bc;
+  --text: #333;
+}
+
+body {
+  font-family: 'Merriweather', 'Georgia', serif;
+  color: var(--text);
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eff1f5;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5a6072;
+  border-radius: 5px;
+}
+
+h1 {
+  font-family: 'LoveloBlack', 'Helvetica', sans-serif;
+  margin-bottom: 0.5rem;
+  font-size: 7.7rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'LoveloBlack', 'Helvetica', sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+li {
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding: 0 1rem;
+}
+
+a {
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
