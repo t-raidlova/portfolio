@@ -9,10 +9,8 @@
 
     <style>
     #wave {
-		height: 200%;
+		height: 100%;
 		position: fixed;
-   
-     
 	}
 
 	#wave .st0 {
